@@ -1,0 +1,82 @@
+body{
+    margin:0px;
+    padding:0px;
+    /* display:flex;  */
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+
+}
+ .container {
+    /* height: 1152px; */
+    /* width: 720px; */
+    height: 500px;
+    width: 700px;
+    overflow: hidden;
+    font-family: url("");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/bg-cover.png");
+    background-repeat: no-repeat;
+    /* /* background-size: 800px, 720px; */
+    background-size: cover;
+    border: black;
+    margin: 10px;
+    padding: 25px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Varta';
+    font-style: normal;
+    font-weight: 300;
+    /* font-display: swap; */
+    /* src: url(https://fonts.gstatic.com/s/varta/v17/Qw3TZQpJHj_6LxvXtvRzMA.woff2) format('woff2');
+unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; */
+}
+
+
+img {
+    height: 80px;
+    width: 80px;
+}
+
+figure {
+
+    margin: 40px;
+    height: 100px;
+    width: 100px;
+
+
+    /* transform: scale(1.2)  */
+
+    /* transition: transform ease-out; */
+}
+
+/* 
+figure:hover {
+    transform: scale(3.0);
+
+    background-image: url("images/wheel-bg.jpg");
+    /* background-size: 300px, 300px; */
+
+border-color: 1px solid black;
+/* padding: 25px; */
+}
+
+*/ .textClass {
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+button{
+    cursor: pointer;
+}
+
