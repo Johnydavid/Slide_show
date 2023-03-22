@@ -1,28 +1,64 @@
-// var slider_img = document.querySelector('.slider-img');
-var images = document.getElementsByTagName("figure");
-var i = 0;
+var photos = [
+    "./images/wgu.png", 
+  "./images/wjr.png",
+  "./images/wp6.png",
+  "./images/wpf.png",
+];
 
+
+
+// photos.forEach((photo)=>{
+//     const slides = document.createElement("img")
+//     slides.src = "photo.png";
+//     slides.alt = "photo"
+    
+// const slideDiv = document.getElementById("slider");
+// slideDiv.append(slides);
+
+// })
+
+
+
+var imgTag = document.querySelector("img");
+var count =0;
+
+function next() {
+  count++;
+  document.getElementById("prevBtn").disabled = false;
+  if (count >= photos.length-1) {
+    document.getElementById("nxtBtn").disabled = true;
+
+    count =0;
+    imgTag.src = photos[count];
+  } else {
+    imgTag.src = photos[count];
+  }
+}
 
 function prev(){
-    for(i=0; i<images.length; i++){
-       console.log(images);
+    count--;
+    if(count <= 0){
+    
+        count <= photos.length -1;
+        document.getElementById("prevBtn").disabled = false;
+
+     
+        imgTag.src = photos[count];
+      
+     
+      
     }
     
 
-        // console.log(images.length)
-    
+   
+       
+
+   
+    else{
+      
+        imgTag.src = photos[count];
+    }
+
+ 
+ 
 }
-
-    	
-
-
-// function next(){
-// 	if(i >= images.length-1) i = -1;
-// 	i++;
-// 	return setImg();			 
-// }
-
-// function setImg(){
-// 	return slider_img.setAttribute('src', "images/"+images[i]);
-	
-// 
