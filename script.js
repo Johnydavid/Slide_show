@@ -1,64 +1,86 @@
-var photos = [
-    "./images/wgu.png", 
-  "./images/wjr.png",
-  "./images/wp6.png",
-  "./images/wpf.png",
-];
 
 
 
-// photos.forEach((photo)=>{
-//     const slides = document.createElement("img")
-//     slides.src = "photo.png";
-//     slides.alt = "photo"
+
+
+
+     
+
+
+
+const slider = document.querySelector(".slider");
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const slides = document.querySelectorAll(".slide");
+const slideIcons = document.querySelectorAll(".slide-icon");
+const numberOfSlides = slides.length;
+var slideNumber = 0;
+
+function next(){
+  //image slider next button
+  prevBtn.removeAttribute("disabled")
+  
+    slides.forEach((slide) => {
     
-// const slideDiv = document.getElementById("slider");
-// slideDiv.append(slides);
+      slide.classList.remove("active");
+     
+    
+    });
+  
 
-// })
+    slideNumber++;
 
+    
+ 
 
+    if(slideNumber > (numberOfSlides - 1)){
+      slideNumber = 0;
+   
+    
+    }
+    
 
-var imgTag = document.querySelector("img");
-var count =0;
+    slides[slideNumber].classList.add("active")
+    
 
-function next() {
-  count++;
-  document.getElementById("prevBtn").disabled = false;
-  if (count >= photos.length-1) {
-    document.getElementById("nxtBtn").disabled = true;
+    if(slideNumber ==0){
+      nextBtn.disabled ="true";
+      
+    }
+  
+ 
 
-    count =0;
-    imgTag.src = photos[count];
-  } else {
-    imgTag.src = photos[count];
-  }
 }
+
+
 
 function prev(){
-    count--;
-    if(count <= 0){
-    
-        count <= photos.length -1;
-        document.getElementById("prevBtn").disabled = false;
-
-     
-        imgTag.src = photos[count];
-      
-     
-      
-    }
-    
-
+  //image slider previous button
+  
+    slides.forEach((slide) => {
+      nextBtn.removeAttribute("disabled")
    
-       
-
+      slide.classList.remove("active");
+     
+    });
    
-    else{
-      
-        imgTag.src = photos[count];
+
+    slideNumber--;
+
+    if(slideNumber < 0){
+      slideNumber = numberOfSlides - 1;
     }
 
- 
- 
+    slides[slideNumber].classList.add("active");
+
+    if(slideNumber ==0){
+      prevBtn.disabled ="true";
+      
+    }
+
+
+    
+
 }
+
+  

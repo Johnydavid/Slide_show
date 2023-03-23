@@ -5,93 +5,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
+    <title>Wheels_Slideshow</title>
+    <link rel="fonts" href="https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500&display=swap">
     <link rel="stylesheet" href="style.css">
+    </link>
+    <script src="./script.js" /defer></script>
 </head>
 
-<style>
-    .container {
-
-        display: flex;
-        justify-content: center;
-
-
-
-
-    }
-
-    .imgDimen {
-        width: 100px;
-        height: 100px;
-
-
-    }
-
-    body {
-
-        font-family: 'Varta';
-        font-style: normal;
-        font-weight: 300;
-
-    }
-
-
-    .layoutClass {
-        margin-top: 5rem;
-
-        height: 300px;
-        width: 75%;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        background-image: url("images/bg-cover.png");
-        background-size: cover;
-        /* width: 100%; */
-        padding: 10px;
-        position: relative;
-        background-repeat: no-repeat;
-        background-position: center;
-
-    }
-
-    .imgClass {
-        margin-top: 5rem;
-
-        height: 300px;
-        width: 75%;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        background-image: url("images/bg-cover.png");
-        background-size: cover;
-        /* width: 100%; */
-        padding: 10px;
-        position: relative;
-        background-repeat: no-repeat;
-        background-position: center;
-
-    }
-
-    .zoomImg{
-        background-color: black;
-
-    }
-
-    .imgTrans{
-        transform: scale();
-    }
-</style>
-
 <body>
+    <div>
+        <h1>WHEELS</h1>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque soluta quo recusandae et? <br />Sequi ex fuga,
+        ad
+        aspernatur minus temporibus? Aliquid ea qui quod totam eos? Id, dolorum voluptates. Natus.</p>
 
 
+    <div class="container">
+        <button class="prev-btn" disabled="true" onclick="prev()">
+            < </button>
 
 
+                <div class="slider">
+                    <div class="slide active">
+                        <img src="images/wgu.png" alt="WGU"> </img>
+                        <div class="info">
+                            <h6>17-INCH CAST ALUMINIUM WHEEL, FULLY PAINTED SILVER LITHO </h6>
+                            <h6>Standard on Touring FWD</h6>
+                            <h5>(WGU)</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/wjr.png" alt="WJR"></img>
+                        <div class="info">
+                            <h6>17-INCH CAST ALUMINIUM DIAMOND-CUT WHEEL WITH BALTIC GREY POCKETS </h6>
+                            <h6>Standard on Touring LFWD/Hybrid and Touring Hybrid</h6>
+                            <h5>(WJR)</h5>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/wp6.png" alt="WP6"></img>
+                        <div class="info">
+                            <h6>18-INCH CAST ALUMINIUM WHEEL WTIH FORESHADOW FINISH</h6>
+                            <h6>Included with S Appearance Package on Touring Hybrid, Touring L Hybrid and Limited
+                                Hybrid
+                            </h6>
+                            <h5>(WP6)</h5>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/wpf.png" alt="Wpf"></img>
+                        <div class="info">
+                            <h6>18-INCH CAST ALUMINIUM WHEEL WTIH FORESHADOW FINISH</h5>
+                                <h6>Included with S Appearance Package on Touring Hybrid, Touring L Hybrid and Limited
+                                    Hybrid
+                                </h6>
+                                <h5>(WPF)</h5>
+                        </div>
+                    </div>
 
 
+                </div>
+                <button class="next-btn" onclick="next()">></button>
+    </div>
 
-
-    <script src="main.js"></script>
 </body>
 
 </html>
